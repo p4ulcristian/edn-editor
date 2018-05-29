@@ -2,6 +2,7 @@
     (:require [reagent.core :as reagent :refer [atom]]
               [secretary.core :as secretary :include-macros true]
               [accountant.core :as accountant]
+              ;[clojure.edn/reader :refer [read-string]]
               [cljs.reader :as reader :refer [read-string read]]))
 
 ;; -------------------------
@@ -24,26 +25,41 @@
 (defn try-to-read [data]
   (if (or (and (= "{" (first data)) (= "}" (last data)))
           (and (= "[" (first data)) (= "]" (last data))))
-   (if-let [new-data (read-string data)]
-     new-data
-     data)
+   (try
+     (read-string data)
+     (catch :default e
+       data))
+     ;(finally data))
+
    data))
 
 
 (defn edit-if-want [[the-key the-content]]
   (let [edit? (atom false)
-        the-value (atom "")]
+        the-value (atom the-content)]
     (fn [[the-key the-content]]
       (if @edit?
-         [:div [:input.uk-input  {:on-change #(reset! the-value (-> % .-target .-value))
-                                  :default-value (str the-content)}]
-          [:a  [:span {:data-uk-icon "check" :on-click #(do
-                                                          (swap! editor-atom assoc-in (vec (conj @show-me-da-way the-key))
-                                                                 (try-to-read @the-value))
-                                                          (reset! edit? false))}]]]
-         [:div
+         [:div.uk-grid-collapse {:data-uk-grid true}
+          [:button.uk-button-default.uk-button-small.uk-button.uk-text-center.uk-padding-small.uk-padding-remove-vertical
+           {:data-uk-icon "check" :on-click #(do
+                                               (swap! editor-atom assoc-in (vec (conj @show-me-da-way the-key))
+                                                      (try-to-read @the-value))
+                                               (reset! edit? false))}]
+          [:input.uk-input.uk-width-expand  {:on-change #(reset! the-value (-> % .-target .-value))
+                                             :default-value (str the-content)}]]
+
+         [:div.uk-inline.uk-width-1-1
           {:on-click #(reset! edit? true)}
-          (str the-content)]))))
+          (str the-content)
+          [:span.uk-label.uk-label-danger.uk-position-right (cond
+                                                             (map? (get-in @editor-atom (vec (conj @show-me-da-way the-key))))
+                                                             "map"
+                                                             (vector? (get-in @editor-atom (vec (conj @show-me-da-way the-key))))
+                                                             "vector"
+                                                             :else "string")]]))))
+
+
+
 
 
 
@@ -82,6 +98,7 @@
 
 (defn walk-edn [the-map]
   [:div
+   (str @editor-atom)
    ;(str the-map)
    (if (vector? (get-in the-map @show-me-da-way))
      (map-indexed #(-> ^{:key %1}[one-array-item %1 %2])
