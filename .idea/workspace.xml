@@ -16,11 +16,8 @@
       <file leaf-file-name="content.cljs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2201">
-              <caret line="6045" column="98" selection-start-line="93" selection-start-column="2" selection-end-line="6045" selection-end-column="98" />
-              <folding>
-                <element signature="e#24#4033#0" />
-              </folding>
+            <state relative-caret-position="1380">
+              <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -28,8 +25,8 @@
       <file leaf-file-name="core.cljs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="153" column="27" lean-forward="true" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+            <state relative-caret-position="245">
+              <caret line="111" column="13" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -43,6 +40,7 @@
       <find>read-str</find>
       <find>input</find>
       <find>breadcr</find>
+      <find>root</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -53,8 +51,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/clj/edn_editor/handler.clj" />
         <option value="$PROJECT_DIR$/resources/public/css/site.css" />
-        <option value="$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
         <option value="$PROJECT_DIR$/src/cljs/edn_editor/core.cljs" />
+        <option value="$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
       </list>
     </option>
   </component>
@@ -242,9 +240,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-          <folding>
-            <element signature="e#24#4033#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -266,9 +261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-          <folding>
-            <element signature="e#24#4033#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -311,9 +303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-          <folding>
-            <element signature="e#24#4033#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -398,9 +387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2201">
           <caret line="6045" column="98" selection-start-line="93" selection-start-column="2" selection-end-line="6045" selection-end-column="98" />
-          <folding>
-            <element signature="e#24#4033#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -422,9 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-          <folding>
-            <element signature="e#24#4033#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -446,9 +429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-          <folding>
-            <element signature="e#24#4033#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -491,9 +471,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-          <folding>
-            <element signature="e#24#4033#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -576,18 +553,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2201">
-          <caret line="6045" column="98" selection-start-line="93" selection-start-column="2" selection-end-line="6045" selection-end-column="98" />
-          <folding>
-            <element signature="e#24#4033#0" />
-          </folding>
+        <state relative-caret-position="1380">
+          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="153" column="27" lean-forward="true" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
+        <state relative-caret-position="245">
+          <caret line="111" column="13" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="13" />
         </state>
       </provider>
     </entry>
