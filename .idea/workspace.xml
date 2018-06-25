@@ -12,21 +12,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="content.cljs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1380">
-              <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="core.cljs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="111" column="13" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="13" />
+            <state relative-caret-position="496">
+              <caret line="174" column="39" selection-start-line="174" selection-start-column="39" selection-end-line="174" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -41,6 +32,11 @@
       <find>input</find>
       <find>breadcr</find>
       <find>root</find>
+      <find>walk-edn</find>
+      <find>String</find>
+      <find>remove</find>
+      <find>edit-if-</find>
+      <find>result</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -51,14 +47,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/clj/edn_editor/handler.clj" />
         <option value="$PROJECT_DIR$/resources/public/css/site.css" />
-        <option value="$PROJECT_DIR$/src/cljs/edn_editor/core.cljs" />
         <option value="$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
+        <option value="$PROJECT_DIR$/src/cljs/edn_editor/core.cljs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="710" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -200,32 +197,46 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="REPL" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="REPL" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Leiningen" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Designer" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="right" id="Leiningen" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.07638889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2970">
+          <caret line="198" column="28" selection-start-line="198" selection-start-column="28" selection-end-line="198" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1665">
+          <caret line="111" column="13" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/clj/edn_editor/handler.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -236,13 +247,7 @@
     <entry file="file://$PROJECT_DIR$/resources/public/css/site.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -257,13 +262,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -278,13 +277,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -299,13 +292,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -320,13 +307,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -341,13 +322,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -362,13 +337,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -383,13 +352,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2201">
-          <caret line="6045" column="98" selection-start-line="93" selection-start-column="2" selection-end-line="6045" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -404,13 +367,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -425,13 +382,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -446,13 +397,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -467,13 +412,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -488,13 +427,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -509,13 +442,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -530,13 +457,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="159" column="25" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="180" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="807">
@@ -551,17 +472,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1380">
-          <caret line="92" column="5" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../drmarron/src/cljs/drmarron/content.cljs" />
     <entry file="file://$PROJECT_DIR$/src/cljs/edn_editor/core.cljs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="111" column="13" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="13" />
+        <state relative-caret-position="496">
+          <caret line="174" column="39" selection-start-line="174" selection-start-column="39" selection-end-line="174" selection-end-column="39" />
         </state>
       </provider>
     </entry>

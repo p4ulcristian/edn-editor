@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Leiningen: watchtower:0.1.1">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/watchtower/watchtower/0.1.1/watchtower-0.1.1.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/watchtower/watchtower/0.1.1/watchtower-0.1.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

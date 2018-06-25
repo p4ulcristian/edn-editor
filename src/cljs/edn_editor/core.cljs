@@ -11,9 +11,10 @@
 
 (def edn-atom (atom {}))
 
-(def editor-atom (atom {:contacts [{:id 1 :name "Batman" :tags ["black" "vigilante" "rich"]}
-                                   {:id 2 :name "Superman" :tags ["strong" "alien" "cryptonite"]}
-                                   {:id 3 :name "Flash" :tags ["fast" "sonic-in-red" "lighting"]}]}))
+(def editor-atom (atom {:all {
+                              :contacts [{:id 1 :name "Batman" :tags ["black" "vigilante" "rich"]}
+                                         {:id 2 :name "Superman" :tags ["strong" "alien" "cryptonite"]}
+                                         {:id 3 :name "Flash" :tags ["fast" "sonic-in-red" "lighting"]}]}}))
 
 
 (defn notification [text]
@@ -42,11 +43,13 @@
         [:div.uk-grid-collapse {:data-uk-grid true}
          [:button.uk-button-default.uk-button-small.uk-button.uk-text-center.uk-padding-small.uk-padding-remove-vertical
           {:data-uk-icon "check" :on-click #(do
-                                              (swap! editor-atom assoc-in (vec (conj @show-me-da-way the-key))
+                                              (swap! editor-atom assoc-in the-key
                                                      (try-to-read @the-value))
                                               (reset! edit? false))}]
-         [:input.uk-input.uk-width-expand {:on-change     #(reset! the-value (-> % .-target .-value))
-                                           :default-value (str the-content)}]]
+         [:textarea.uk-textarea.uk-width-expand
+          {:rows 6
+           :on-change     #(reset! the-value (-> % .-target .-value))
+           :default-value (str the-content)}]]
 
         [:div.uk-inline.uk-width-1-1
          {:on-click #(reset! edit? true)}
@@ -96,18 +99,85 @@
     {:style {:border-bottom "1px solid white"}}
     [:div.uk-text-truncate [edit-if-want [index data]]]]])
 
-(defn walk-edn [the-map]
-  [:div
-   (if (vector? (get-in the-map @show-me-da-way))
-     (map-indexed #(-> ^{:key %1} [one-array-item %1 %2])
-                  (if (= [] @show-me-da-way)
-                    the-map
-                    (get-in the-map @show-me-da-way)))
 
-     (map-indexed #(-> ^{:key (first %2)} [one-key-and-content %2])
-                  (if (= [] @show-me-da-way)
-                    the-map
-                    (get-in the-map @show-me-da-way))))])
+
+
+
+(defn vec-remove
+  "remove elem in coll"
+  [coll pos]
+  (vec (concat (subvec coll 0 pos) (subvec coll (inc pos)))))
+
+
+
+(defn recursion-wrapper [the-item this-data next-item route the-map]
+  (let [edit? (atom false)
+        show? (atom false)]
+    (fn [the-item this-data next-item route  the-map]
+      [:div.uk-width-1-1.uk-inline
+       [:label.uk-label {:on-click (fn [a] (do
+                                             (reset! show? (not @show?))))}
+        this-data]
+       (if @edit?
+         [:div
+          [:span.uk-padding-small.uk-padding-remove-vertical
+           {:on-click #(reset! edit? (not @edit?))
+            :data-uk-icon "file-edit"}]
+          [edit-if-want [route next-item]]]
+         (if (or (map? next-item) (vector? next-item))
+           [:span.uk-padding-small.uk-padding-remove-vertical
+            {:on-click #(reset! edit? (not @edit?))
+             :data-uk-icon "file-edit"}]))
+       [:span.uk-padding-small.uk-position-right
+        [:span.uk-label {:style {:background "lightblue"}}
+         (str (cond
+                (map? (get-in @editor-atom route))
+                "map"
+                (vector? (get-in @editor-atom route))
+                "vector"
+                (string? (get-in @editor-atom route))
+                "string"
+                (number? (get-in @editor-atom route))
+                "number"
+                :else "más"))]]
+       [:div
+        {:style {:display (if @show? "" "none")}}
+        the-item]])))
+
+
+(defn walk-edn [the-map route]
+  (let []
+    (fn [the-map route]
+      [:ul.uk-margin-remove.uk-list
+       (if (or (map? the-map) (vector? the-map))
+
+         (map-indexed #(-> ^{:key %1}[:li
+                                      (cond
+                                        (map? the-map)
+                                        ^{:key 1}[recursion-wrapper
+                                                  [walk-edn (second %2) (conj route (first %2))]
+                                                  (str (first %2))
+                                                  (second %2)
+                                                  (conj route (first %2))
+                                                  the-map]
+                                        (vector? the-map)
+                                        ^{:key 2}[recursion-wrapper
+                                                  [walk-edn %2
+                                                   (conj route %1)]
+                                                  (str %1)
+                                                  %2
+                                                  (conj route %1)
+                                                  the-map]
+                                        :else ^{:key 3}[:div "Vége"])])
+
+                      (cond
+                        (map? the-map)
+                        (sort-by #(str (first %))
+                                 the-map)
+                        :else the-map))
+         [:span
+          [edit-if-want [route the-map]]])])))
+
 
 (defn add-edn []
   (let []
@@ -116,29 +186,15 @@
        [:div.uk-card-body.uk-padding-small
         [:form.uk-form.uk-flex-center.uk-margin-remove {:data-uk-grid true}
          [:textarea.uk-textarea.uk-width-1-1.uk-text-center.uk-margin-remove.uk-padding-remove {:rows 5 :placeholder "ADD EDN" :on-change #(reset! edn-atom (-> % .-target .-value))}]]
-        [:button.uk-button.uk-button-secondary.uk-width-1-1.uk-margin-remove {:on-click #(do
-                                                                                           (reset! show-me-da-way [])
-                                                                                           (reset! editor-atom (read-string @edn-atom)))}
+        [:button.uk-button.uk-button-secondary.uk-width-1-1.uk-margin-remove {:on-click #(reset! editor-atom {:all (read-string @edn-atom)})}
          "Process data!"]]])))
-
-
-(defn one-breadcrumb [index text]
-  [:li [:a {:on-click #(reset! show-me-da-way (vec (take (inc index) @show-me-da-way)))}
-        text]])
-
-(defn breadcrumbs []
-  [:div.uk-width-1-1
-   [:ul.uk-breadcrumb
-    [:li [:a {:on-click #(reset! show-me-da-way [])}
-          "Starting point"]]
-    (map-indexed #(-> ^{:key %1} [one-breadcrumb %1 %2]) @show-me-da-way)]])
 
 (defn result []
   (let [shown? (atom false)]
     (fn []
       [:div.uk-width-1-1.uk-margin-large
        (if @shown?
-         [:textarea.uk-textarea {:value (str @editor-atom) :disabled true}]
+         [:textarea.uk-textarea.uk-height-large {:value (str (:all @editor-atom)) :disabled true}]
          [:button.uk-button.uk-button-default.uk-width-1-1.uk-text-center {:on-click #(reset! shown? true)} "Show Result!"])])))
 
 (defn home-page []
@@ -146,12 +202,7 @@
    [:div.uk-container {:style {:min-height "100vh"}}
     [:h2.uk-padding-small.uk-margin-remove.uk-heading-line.uk-text-center.uk-card-secondary {:data-uk-sticky true} [:span "EDN (Extensible Data Notation) Editor"]]
     [add-edn]
-    [:div.uk-card-primary [:h3.uk-width-1-1.uk-text-center.uk-dark "click on key to go further in the tree. click on value to edit"]]
-    [breadcrumbs]
-    [:div.uk-grid-collapse {:data-uk-grid true}
-     [:div.uk-width-1-5.uk-text-center.uk-text-large.uk-padding-small "Key"]
-     [:div.uk-width-4-5.uk-text-center.uk-text-large.uk-padding-small "Value"]]
-    [walk-edn @editor-atom]
+    [walk-edn @editor-atom []]
     [result]]])
 ;[:div [:input.uk-input.uk-input-default {:placeholder "EDN" :on-change #(reset! edn-atom (-> % .-target .-value))}]]])
 

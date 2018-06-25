@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Leiningen: figwheel:0.5.16">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/figwheel/figwheel/0.5.16/figwheel-0.5.16.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/figwheel/figwheel/0.5.16/figwheel-0.5.16.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Leiningen: reagent-utils:0.3.1">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/reagent-utils/reagent-utils/0.3.1/reagent-utils-0.3.1.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/reagent-utils/reagent-utils/0.3.1/reagent-utils-0.3.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

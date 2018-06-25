@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Leiningen: com.google.protobuf/protobuf-java:3.0.2">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/com/google/protobuf/protobuf-java/3.0.2/protobuf-java-3.0.2.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/com/google/protobuf/protobuf-java/3.0.2/protobuf-java-3.0.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

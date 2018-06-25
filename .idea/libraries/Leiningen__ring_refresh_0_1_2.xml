@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="Leiningen: ring-refresh:0.1.2">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/ring-refresh/ring-refresh/0.1.2/ring-refresh-0.1.2.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/ring-refresh/ring-refresh/0.1.2/ring-refresh-0.1.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
